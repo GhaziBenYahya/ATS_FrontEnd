@@ -1,0 +1,146 @@
+ 
+<div class="ma-div">
+
+    <div class="container" style="width: 700px;">
+
+        <div class="card-top"></div>
+        <div class="card">
+
+
+
+
+            <div class="text-center">
+
+                <h1 class="title">
+                    <span class="bg-success p-2 text-white g-bg-cyan" >  &nbsp;    &nbsp;   &nbsp;   &nbsp;   &nbsp;     ATS   &nbsp;    &nbsp;   &nbsp;   &nbsp;   &nbsp;     </span>
+                  
+                </h1>
+                <br>
+                
+                <h2 class="title"> 
+                    S'inscrire 
+                </h2>
+                  
+    
+            </div>
+
+
+
+
+
+
+
+        
+            <div class="body">
+                
+                <form>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.account.nom" class="form-control" name="nom" placeholder="Nom"
+                                required >
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.account.prenom" class="form-control" name="prenom"
+                                placeholder="Prénom" >
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                        <div class="form-line">
+                            <input type="email" [(ngModel)]="user.account.email_compte" class="form-control" name="email_compte"
+                                placeholder="Email " required>
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                        <div class="form-line">
+                            <input type="password" [(ngModel)]="user.account.password" class="form-control" name="password"
+                                minlength="6" placeholder="Mot De Passe" required>
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                        <div class="form-line">
+                            <input type="password" [(ngModel)]="user.account.confirm" class="form-control" name="confirm"
+                                minlength="6" placeholder="Confirm Mot De Passe" required>
+                        </div>
+                    </div>
+                  <!--  <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.account.Role" class="form-control" name="Role"
+                                placeholder="role"  >
+                        </div>
+                    </div>
+                    -->
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.cin" class="form-control" name="cin"
+                                placeholder="CIN" required >
+                        </div>
+                    </div><div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="date" [(ngModel)]="user.date" class="form-control" name="date"
+                                placeholder="Date De Naissance" required >
+                        </div>
+                    </div><div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.adresse" class="form-control" name="adresse"
+                                placeholder="Adresse" required>
+                        </div>
+                    </div>
+                  
+                <!--
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.siteweb" class="form-control" name="siteweb"
+                                placeholder="SiteWeb" required>
+                        </div>
+                    </div>
+                    -->
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.tel" class="form-control" name="tel"
+                                placeholder="TEL" required>
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="text" [(ngModel)]="user.fax" class="form-control" name="fax"
+                                placeholder="FAX" >
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                        <div class="form-line">
+                            <input type="file" (change)="selectFile($event)" class="form-control" name="image"
+                                placeholder="FAX">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button (click)="inscrir()" class="btn btn-raised g-bg-cyan waves-effect" [disabled]="!user.account.nom || !user.account.prenom " >
+                            S'inscrire</button>
+                    </div>
+<br>
+                    <!--activie compte-->
+                    <div class="text-center">
+                        <a [routerLink]="['/Activer2']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>ACTIVER COMPTE</span> </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    

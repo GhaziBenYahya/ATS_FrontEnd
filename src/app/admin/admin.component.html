@@ -1,0 +1,120 @@
+
+<body class="theme-cyan">
+  
+    
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    
+ 
+    
+    <!-- Morphing Search  -->
+   
+    
+    <!-- Top Bar -->
+    <nav class="navbar clearHeader">
+        <div class="col-12">
+            <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand" href="index-2.html">AppCollect</a> </div>
+            <ul class="nav navbar-nav navbar-right">
+            
+
+            </ul>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section> 
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar"> 
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="admin-image"> <img [src]="'data:image/png;base64,'+profile.photo" alt="" style="height: 72px;">  </div>
+                <div class="admin-action-info"> <span>Bienvenu</span>
+                    <h3>{{profile.nom}} </h3>
+                    <br>
+                    <h3> {{profile.prenom}}</h3>
+                    <ul>
+
+                        <li><a (click)="logout()" title="Déconnexion" ><i class="zmdi zmdi-sign-in"></i></a></li>
+                    </ul>
+                </div>
+               
+            </div>
+            <!-- #User Info --> 
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                                                    
+                    <li><a [routerLink]="['/admin/Publier']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>Publier des annonces</span> </a>
+                        
+                    </li>
+                    <li><a [routerLink]="['/admin/recrutement']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>recrutement</span> </a>
+                        
+                    </li>
+                  
+                  
+                   
+                        
+                    
+                    
+                    
+
+                    
+                <!--
+                  <li><a [routerLink]="['/admin/AjouterUtilisateur']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>AJOUTER PERSONNELS</span> </a>
+                        
+                    </li>
+                    <li><a [routerLink]="['/admin/Activer']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>ACTIVER COMPTE</span> </a>
+                        
+                    </li>
+                  
+                    <li><a  [routerLink]="['/admin/listeU']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>LISTE DES PERSONNELS</span> </a>
+                        
+                    </li>
+                    <li><a [routerLink]="['/admin/listeP']"class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>LISTE DES PATIENTS</span> </a>
+                        
+                    </li>
+                    <li><a [routerLink]="['/admin/salledattende']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>SALLE D'ATTENDE</span> </a>
+                        
+                    </li>
+                    <li><a [routerLink]="['/admin/statistique']" class="menu-toggle"><i class="zmdi zmdi-account-o"></i><span>STATISTIQUE</span> </a>
+                        
+                    </li>   
+                -->
+
+              
+                    
+           
+                </ul>
+            </div>
+            <!-- #Menu -->
+        </aside>
+        
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#skins">Skins</a></li>
+   
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane in active in active" id="skins">
+                    <ul class="demo-choose-skin">
+                        <li data-theme="red"><div class="red"></div><span>Red</span> </li>
+                        <li data-theme="purple"><div class="purple"></div><span>Purple</span> </li>
+                        <li data-theme="blue"><div class="blue"></div><span>Blue</span> </li>
+                        <li data-theme="cyan" class="active"><div class="cyan"></div><span>Cyan</span> </li>
+                        <li data-theme="green"><div class="green"></div><span>Green</span> </li>
+                        <li data-theme="deep-orange"><div class="deep-orange"></div><span>Deep Orange</span> </li>
+                        <li data-theme="blue-grey"><div class="blue-grey"></div><span>Blue Grey</span> </li>
+                        <li data-theme="black"><div class="black"></div><span>Black</span> </li>
+                        <li data-theme="blush"><div class="blush"></div><span>Blush</span> </li>
+                    </ul>
+                </div>
+            
+               
+            </div>
+        </aside>
+        
+    </section>
+    
+    <div><router-outlet></router-outlet></div>
+    <div class="color-bg"></div>
+</body>

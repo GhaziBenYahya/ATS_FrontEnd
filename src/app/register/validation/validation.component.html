@@ -1,0 +1,53 @@
+
+   
+   
+
+
+   <body class="card-body">
+    <div class="ma-div">
+
+   
+    <div class="container" style="width: 660px;">
+        <div class="card-top"></div>
+        <div class="card">
+
+
+
+            <div class="text-center">
+
+                <h1 class="title">
+                    <span class="bg-success p-2 text-white g-bg-cyan" >   &nbsp;   &nbsp;     ATS   &nbsp;   &nbsp;     </span>
+                  
+                </h1>
+                <br>
+                
+                <h2 class="title"> 
+                    MOT DE PASSE OUBLIÉ? 
+                </h2>
+                <p> Entrez votre adresse e-mail ci-dessous pour réinitialiser votre mot de passe</p>
+            
+            </div>
+
+
+            <div class="body">
+                <form>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"> <i class="zmdi zmdi-email"></i> </span>
+                        <div class="form-line">
+                            <input type="email" [(ngModel)]="user.Email"  class="form-control" name="email" placeholder="Email" required autofocus>
+                        </div>
+                    </div>              
+                    <div class="row">                    
+                        <div class="col-sm-12 text-center">
+                            <a (click)="forget()"  class="btn btn-raised waves-effect g-bg-cyan">RÉINITIALISER MON MOT DE PASSE</a>
+                        </div>
+                        <div class="col-sm-12 text-center"> <a [routerLink]="['']">Connexion!</a> </div>
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </div>
+</div>
+    </body>
+
+    

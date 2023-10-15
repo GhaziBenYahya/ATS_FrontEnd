@@ -1,0 +1,162 @@
+<section class="content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <h2>Publier des annonces</h2>
+
+
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <form [formGroup]='inscriptionForm'>
+                            
+
+
+
+                            <div class="container">
+                                <h1> publication</h1>
+                                <form>
+                                    <label for="titre">Titre :</label>
+                                    <input type="text" id="titre" name="titre" required>
+                                    <label for="contenu">Contenu :</label>
+                                    <textarea id="contenu" name="contenu" required></textarea>
+                                    <label for="auteur">Auteur :</label>
+                                    <input type="text" id="auteur" name="auteur" required>
+                                    
+                                </form>
+                            </div>
+
+                            <!--
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="text" [(ngModel)]="user.account.prenom" class="form-control"
+                                        name="Prénom" placeholder="prenom" formControlName='prenom' required>
+                                </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                                <div class="form-line">
+                                    <input type="email" [(ngModel)]="user.account.email_compte" class="form-control"
+                                        name="email_compte" placeholder="Email " formControlName='email_compte' required>
+                                        <small style="color: brown;" *ngIf="user.account.email_compte && inscriptionForm.get('email').errors"><span
+                                            *ngIf="inscriptionForm.get('email').errors.email ; else error_min">Email Invalide</span>
+                                        <ng-template #error_min>min 10 carac</ng-template>
+                                        <span ng></span>
+                                    </small>
+                                    </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                <div class="form-line">
+                                    <input type="password" [(ngModel)]="user.account.password" class="form-control"
+                                        name="password"  placeholder="Mot De Passe"   formControlName='motpass' minlength="9" required>
+                                </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                                <div class="form-line">
+                                    <input type="password" [(ngModel)]="user.account.confirm" class="form-control"
+                                        name="confirm" minlength="9" placeholder="Confirme Mot De Passe"  formControlName='cmotpass' required>
+                                        <small
+                                        *ngIf="inscriptionForm.get('cmotpass').errors && inscriptionForm.get('cmotpass').errors.conf_error">mot de
+                                        passe non identique</small>
+                                </div>
+                            </div>
+                            <div >
+                               
+                             
+                                <h5>Role</h5>                <select class="form-select" aria-label="Default select example"
+                                        [(ngModel)]="user.account.Role" name="Role" placeholder="Role">
+                                      
+                                        <option value="1">Technicien</option>
+                                        <option value="2">Docteur</option>
+                                        <option value="3">Infirmier</option>
+
+                                    </select>
+
+                                
+                            </div>
+
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="text" [(ngModel)]="user.cin" class="form-control" name="cin"
+                                        placeholder="CIN" formControlName='cin' minlength="8
+                                        " required>
+                                </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="date" [(ngModel)]="user.date" class="form-control" name="date"
+                                required>
+                                </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="text" [(ngModel)]="user.adresse" class="form-control" name="adresse"
+                                        placeholder="Adresse" required>
+                                </div>
+                            </div>
+                            <div >
+                               
+                             
+                                <h5>Spécialité</h5>                <select class="form-select" aria-label="Default select example"
+                                [(ngModel)]="user.specialite" name="Role" placeholder="Role">
+                                      
+                                        <option value="1">Médecine</option>
+                                        <option value="2">Chirurgie</option>
+                                        <option value="3">Orthopédie</option>
+
+                                    </select>
+
+                                
+                            </div>
+
+      
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="text" [(ngModel)]="user.siteweb" class="form-control" name="siteweb"
+                                        placeholder="siteweb" required>
+                                </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="text" [(ngModel)]="user.tel" class="form-control" name="tel"
+                                        placeholder="TEL" formControlName='tel' minlength="8" required>
+                                </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="text" [(ngModel)]="user.fax" class="form-control" name="fax"
+                                        placeholder="FAX">
+                                </div>
+                            </div>
+                            <div class="input-group icon before_span">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+                                <div class="form-line">
+                                    <input type="file" (change)="selectFile($event)" class="form-control" name="image"
+                                        placeholder="FAX">
+                                </div>
+                            </div>
+-->
+
+
+                            <div class="text-center">
+                                <button  class="btn btn-raised g-bg-cyan waves-effect"
+                                [disabled]="! inscriptionForm.valid">Publier</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

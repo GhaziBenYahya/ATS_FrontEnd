@@ -1,0 +1,55 @@
+<div class="ma-div">
+
+    <div class="container" style="width: 700px;">
+
+        <div class="card-top"></div>
+        <div class="card">
+
+        <div class="text-center">
+
+            <h1 class="title">
+                <span class="bg-success p-2 text-white g-bg-cyan" >  &nbsp;    &nbsp;   &nbsp;   &nbsp;   &nbsp;     ATS   &nbsp;    &nbsp;   &nbsp;   &nbsp;   &nbsp;     </span>
+              
+            </h1>
+            <br>
+            
+            <h2 class="title"> 
+                Réinitialiser votre mot de passe 
+            </h2>
+              
+
+        </div>
+            <div class="body">
+                <form>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"> <i class="zmdi zmdi-account"></i> </span>
+                        <div class="form-line">
+                            <input type="text"   [(ngModel)]="user.Token"  class="form-control"name="token" placeholder="Code" required
+                                autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"> <i class="zmdi zmdi-lock"></i> </span>
+                        <div class="form-line">
+                            <input type="password"  [(ngModel)]="user.Password" class="form-control"  name="Password" placeholder="Nouveau Mot De Passe" required>
+                        </div>
+                    </div>
+                    <div class="input-group icon before_span">
+                        <span class="input-group-addon"> <i class="zmdi zmdi-lock"></i> </span>
+                        <div class="form-line">
+                            <input type="password"  [(ngModel)]="user.ConfirmPassword" class="form-control"  name="Password" placeholder="Confirme Mot De Passe" required>
+                        </div>
+                    </div>
+                    <div>
+                        
+                        <div class="text-center">
+                            <a (click)="confirm()"  class="btn btn-raised waves-effect g-bg-cyan">VALIDER</a>
+                            <a [routerLink]="['']" class="btn btn-raised waves-effect">connexion</a>
+                        </div>
+                        <div class="text-center"> <a [routerLink]="['/validation']" >
+                            Mot de passe oublié?</a></div>
+                    </div>
+                </form>
+            </div>
+    </div>
+    </div>
